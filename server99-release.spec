@@ -89,6 +89,7 @@ NAME=Server99
 VERSION="%{dist_version} (%{release_name})"
 ID=server99
 ID_LIKE=fedora
+VARIANT_ID=server
 VERSION_ID=%{dist_version}
 PRETTY_NAME="Server99 %{dist_version} (%{release_name})"
 ANSI_COLOR="0;94"
