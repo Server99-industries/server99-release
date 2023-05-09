@@ -141,10 +141,10 @@ mkdir -p $RPM_BUILD_ROOT/usr/lib/systemd/user-preset/
 mkdir -p $RPM_BUILD_ROOT%{_prefix}/lib/systemd/system-preset/
 
 # Default system wide
-install -Dm0644 %{Source1} -t $RPM_BUILD_ROOT%{_prefix}/lib/systemd/system-preset/
-install -Dm0644 %{Source2} -t $RPM_BUILD_ROOT%{_prefix}/lib/systemd/system-preset/
-install -Dm0644 %{Source3} -t $RPM_BUILD_ROOT%{_prefix}/lib/systemd/system-preset/
-install -Dm0644 %{Source4} -t $RPM_BUILD_ROOT%{_prefix}/lib/systemd/user-preset/
+install -Dm0644 %{SOURCE1} -t $RPM_BUILD_ROOT%{_prefix}/lib/systemd/system-preset/
+install -Dm0644 %{SOURCE2} -t $RPM_BUILD_ROOT%{_prefix}/lib/systemd/system-preset/
+install -Dm0644 %{SOURCE3} -t $RPM_BUILD_ROOT%{_prefix}/lib/systemd/system-preset/
+install -Dm0644 %{SOURCE4} -t $RPM_BUILD_ROOT%{_prefix}/lib/systemd/user-preset/
 
 
 %files common
