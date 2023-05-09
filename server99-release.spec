@@ -4,18 +4,14 @@
 Summary:	Server99 release files
 Name:		server99-release
 Version:	%{dist_version}
-Release:	2%{?dist}
+Release:	1%{?dist}
 License:	MIT
 Group:		System Environment/Base
 Source0:	LICENSE
-Source1:	README.developers
-Source2:	README.Server99-Release-Notes
-Source3:	README.license
-
-Source6:	85-display-manager.preset
-Source7:	90-default.preset
-Source8:	99-default-disable.preset
-Source9:	90-default-user.preset
+Source1:	85-display-manager.preset
+Source2:	90-default.preset
+Source3:	99-default-disable.preset
+Source4:	90-default-user.preset
 
 BuildArch: 	noarch
 
@@ -145,10 +141,10 @@ mkdir -p $RPM_BUILD_ROOT/usr/lib/systemd/user-preset/
 mkdir -p $RPM_BUILD_ROOT%{_prefix}/lib/systemd/system-preset/
 
 # Default system wide
-install -Dm0644 %{SOURCE6} -t $RPM_BUILD_ROOT%{_prefix}/lib/systemd/system-preset/
-install -Dm0644 %{SOURCE7} -t $RPM_BUILD_ROOT%{_prefix}/lib/systemd/system-preset/
-install -Dm0644 %{SOURCE8} -t $RPM_BUILD_ROOT%{_prefix}/lib/systemd/system-preset/
-install -Dm0644 %{SOURCE9} -t $RPM_BUILD_ROOT%{_prefix}/lib/systemd/user-preset/
+install -Dm0644 %{Source1} -t $RPM_BUILD_ROOT%{_prefix}/lib/systemd/system-preset/
+install -Dm0644 %{Source2} -t $RPM_BUILD_ROOT%{_prefix}/lib/systemd/system-preset/
+install -Dm0644 %{Source3} -t $RPM_BUILD_ROOT%{_prefix}/lib/systemd/system-preset/
+install -Dm0644 %{Source4} -t $RPM_BUILD_ROOT%{_prefix}/lib/systemd/user-preset/
 
 
 %files common
